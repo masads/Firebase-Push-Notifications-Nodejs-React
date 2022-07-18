@@ -1,0 +1,7 @@
+save the token to the server and update whenever it logout
+With the HTTP v1 API, these error messages may indicate that your send request targeted stale or invalid tokens:
+
+UNREGISTERED (HTTP 404)
+INVALID_ARGUMENT (HTTP 400)
+
+. An update frequency of once per month likely strikes a good balance between battery impact vs. detecting inactive registration tokens.
