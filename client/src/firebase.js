@@ -13,7 +13,7 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const messaging = getMessaging(app);
+export const messaging = getMessaging(app);
 export const requestForToken = async () => {
   return getToken(messaging, {
     vapidKey:
@@ -34,10 +34,11 @@ export const requestFirebaseNotificationPermission = () =>
       });
   });
 
-export const onMessageListener = () =>
-  new Promise((resolve) => {
-    onMessage(messaging, (payload) => {
-      //   console.log("payload", payload);
-      resolve(payload);
-    });
-  });
+// export const onMessageListener = () => {
+//   return new Promise((resolve, reject) => {
+//     onMessage(messaging, (payload) => {
+//       console.log(payload);
+//       resolve(payload);
+//     });
+//   });
+// };
